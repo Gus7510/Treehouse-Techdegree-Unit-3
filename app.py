@@ -44,8 +44,17 @@ if __name__ == '__main__':
     #print(game.active_phrase.phrase)    # this prints a phrase
     
     # Step 7 - we test if the following code prints the active phrase and a series of underscores "_"
-    print(game.active_phrase.phrase)    # print active phrase
-    game.active_phrase.display(game.guesses)    # should print a series of "_"
+    #print(game.active_phrase.phrase)    # print active phrase
+    #game.active_phrase.display(game.guesses)    # should print a series of "_"
+    
+    # Step 8 - welcome message
+    #game.welcome()
+    
+    # Step 9 - we display some stuff
+    #print(game.active_phrase.phrase)
+    game.start()
+    
+    
     
     
     

@@ -7,49 +7,39 @@ class Phrase():
         self.phrase = phrase.lower()
         
     def display(self, guesses):     # Step 7 
-        self.guesses = [" "]
         
         phrase_reveal = ""
         for letter in self.phrase:
-            if letter in self.guesses:
+            if letter in guesses:
                 phrase_reveal += letter
-                #print(f"{letter}", end=" ")
+                
+            
             else:
                 phrase_reveal += "_ "
-                #print("_ ")
+                
              
         print(f"{phrase_reveal}", end=" ")
         
+    def check_guess(self,guess):    #Step 11
+        
+        if guess in self.phrase:
+            return True
+        else:
+            return False
         
         
+    def check_complete(self, guesses): # Step 13
         
-        
-        """
         for letter in self.phrase:
-            if letter in guesses:
-                print(f"{letter}", end=" ")
-            #elif letter == " ":
-            #    print(f"{letter}", end=" ")
+            
+            if "_ " in guesses:     # not sure about this line
+                return False
             else:
-                print("_ ")
-        
-        ###
-        This code generates the following:
-        no pain no gain
-        _ 
-        _ 
-          _ 
-        _ 
-        _ 
-        _ 
-          _ 
-        _ 
-          _ 
-        _ 
-        _ 
-        _ 
+                return True
         
         
-        """
+        
+        
+        
         
         

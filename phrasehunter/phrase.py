@@ -6,6 +6,7 @@ class Phrase():
     def __init__(self, phrase):
         self.phrase = phrase.lower()
         
+        
     def display(self, guesses):     # Step 7 
         
         phrase_reveal = ""
@@ -29,17 +30,11 @@ class Phrase():
         
         
     def check_complete(self, guesses): # Step 13
-        
+    
         for letter in self.phrase:
-            
-            if "_ " in guesses:     # not sure about this line
+            if letter not in guesses:
                 return False
-            else:
-                return True
-        
-        
-        
-        
-        
+            
+        return True
         
         
